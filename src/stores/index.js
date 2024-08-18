@@ -1,0 +1,18 @@
+import { createApp } from "vue";
+import { createStore } from "vuex";
+
+// Create a new store instance.
+const store = createStore({
+  state() {
+    return {
+        isVisible :false,
+    };
+  },
+  mutations: {
+     toggleNav (state){
+        state.isVisible = !state.isVisible;
+      },
+  },
+});
+
+export default store;

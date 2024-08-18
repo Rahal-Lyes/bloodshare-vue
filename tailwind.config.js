@@ -13,7 +13,13 @@ export default {
       fontSize: {
         sl: "1.35rem",
       },
+      backgroundImage: {
+        home: "url('./src/assets/slider2.jpg')",
+      },
+      blur: {
+        xs: '1px',
+      }
     },
   },
   plugins: [],
-}
+};
