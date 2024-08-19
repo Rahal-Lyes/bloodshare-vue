@@ -19,6 +19,7 @@ import {
   faUserSecret,
   faHeadset,
   faBars,
+  faHouse
 } from "@fortawesome/free-solid-svg-icons";
 /* import specific icons */
 
@@ -33,7 +34,7 @@ library.add(
   faUserPlus,
   faUserSecret,
   faHeadset,
-  faBars
+  faBars,faHouse
 );
 app.component("font-awesome-icon", FontAwesomeIcon);
 app.use(router);

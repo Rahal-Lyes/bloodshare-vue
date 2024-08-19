@@ -1,22 +1,18 @@
 <template>
-  <header>
-
-      <NavBar />
-
+   <div class="flex flex-col">
+    <header>
+    <NavBar />
   </header>
-  <transition @before-enter="beforeEnter" 
-  @after-enter="afterEnter"
-  @enter="enter">
-    <router-view />
-  </transition>
+  <main class="flex-grow">
+      <router-view />
+    </main>
+<Footer/>
+   </div>
+ 
 </template>
 
 <script setup>
 import NavBar from "./components/NavBar.vue";
-import { gsap } from "gsap";
-
-
-
-
+import Footer from "./components/Footer.vue";
 
 </script>

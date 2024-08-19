@@ -1,11 +1,12 @@
 <template>
   <div
-    class="w-full h-auto fixed items-center flex justify-between py-4 transition-all duration-300 ease-in-out shadow-md bg-white"
+    class="w-full h-auto fixed items-center flex justify-between py-4 transition-all duration-300 
+    ease-in-out shadow-md bg-white z-50"
   >
     <div
       class="px-10 flex justify-between items-center w-full h-18 max-lg:flex-col"
     >
-      <div class="text-2xl font-semibold">
+      <div class="text-2xl font-semibold ">
         <router-link :to="{ name: 'home' }" class="text-red-500">
           <span class="font-sail">S</span>hare
           <font-awesome-icon :icon="['fas', 'droplet']" />
@@ -14,39 +15,32 @@
       </div>
 
       <!-- Menu de navigation -->
-     
-        <nav
+
+      <nav
         :class="{
           'hidden lg:flex': !store.state.isVisible,
           'block lg:flex': store.state.isVisible,
         }"
         class="flex flex-row gap-5 items-center max-md:flex-col"
       >
-
-     
         <ul
           v-for="link in links"
           :key="link.name"
           class="text-blue-1 text-xl font-medium flex flex-row gap-5"
         >
-     
           <router-link
             :to="link.path"
             class="hover:text-red-400 hover:text-sl hover:font-bold ease-in duration-200"
           >
-       
             <li>
               <font-awesome-icon :icon="['fas', link.icon]" />
               {{ link.name }}
             </li>
           </router-link>
-   
         </ul>
-
 
         <login title="Login" />
       </nav>
-    
     </div>
 
     <!-- Bouton pour menu mobile -->
@@ -64,10 +58,10 @@ const store = useStore();
 import Login from "./Login.vue";
 
 const links = [
-{
+  {
     name: "Home",
     path: "/",
-    icon: "Fahome",
+    icon: "fa-house",
   },
   {
     name: "About",
@@ -95,6 +89,4 @@ const links = [
     icon: "user-plus",
   },
 ];
-
-
 </script>
