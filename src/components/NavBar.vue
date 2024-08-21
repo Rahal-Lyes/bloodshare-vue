@@ -1,12 +1,11 @@
 <template>
   <div
-    class="w-full h-auto fixed items-center flex justify-between py-4 transition-all duration-300 
-    ease-in-out shadow-md bg-white z-50"
+    class="w-full h-auto fixed items-center flex justify-between py-4 transition-all duration-300 ease-in-out shadow-md bg-white z-50"
   >
     <div
       class="px-10 flex justify-between items-center w-full h-18 max-lg:flex-col"
     >
-      <div class="text-2xl font-semibold ">
+      <div class="text-2xl font-semibold">
         <router-link :to="{ name: 'home' }" class="text-red-500">
           <span class="font-sail">S</span>hare
           <font-awesome-icon :icon="['fas', 'droplet']" />
@@ -14,7 +13,7 @@
         </router-link>
       </div>
 
-      <!-- Menu de navigation -->
+   
 
       <nav
         :class="{
@@ -26,11 +25,11 @@
         <ul
           v-for="link in links"
           :key="link.name"
-          class="text-blue-1 text-xl font-medium flex flex-row gap-5"
+          class="text-blue-1 text-md font-medium flex flex-row gap-5"
         >
           <router-link
             :to="link.path"
-            class="hover:text-red-400 hover:text-sl hover:font-bold ease-in duration-200"
+            class="hover:text-red-400 hover:font-bold ease-in duration-200"
           >
             <li>
               <font-awesome-icon :icon="['fas', link.icon]" />
@@ -39,7 +38,7 @@
           </router-link>
         </ul>
 
-        <login title="Login" />
+        <login title="Login" icon="sign-in-alt" />
       </nav>
     </div>
 
@@ -78,11 +77,7 @@ const links = [
     path: "findDonor",
     icon: "search",
   },
-  {
-    name: "Login",
-    path: "login",
-    icon: "sign-in-alt",
-  },
+
   {
     name: "Register",
     path: "register",

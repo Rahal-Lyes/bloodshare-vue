@@ -1,6 +1,6 @@
 <template>
   <div
-    class="h-screen bg-home bg-cover bg-center  max-md:invisible  "
+    class="h-screen bg-home bg-cover bg-center  max-md:invisible "
     :class="{ 'pt-96': store.state.isVisible, 'pt-28': !store.state.isVisible }"
     
   >  </div>
@@ -29,10 +29,10 @@
 
 <script setup>
 import { ref, onMounted } from "vue";
-import { useStore } from "vuex";
-import login from "../components/Login.vue";
+  import { useStore } from "vuex";
+  import login from "../components/Login.vue";
 
-const store = useStore();
+  const store = useStore();
 const texts = ref(["Blood Donation", "Save Lives", "Be a Hero"]);
 let index = ref(0);
 const currentText = ref(texts.value[0]);
